@@ -1,0 +1,7 @@
+#项目依赖库
+
+Django==1.8.3
+MySQL-python==1.2.5
+pyYAML==3.11
+uuid==1.30
+
