@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# encoding:utf-8
 """
 Django settings for website project.
 
@@ -60,6 +62,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog',
+    'core',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -101,7 +105,7 @@ mysql = CONFIG.mysql
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': mysql.DATABASE,  # Or path to database file if using sqlite3.
         'USER': mysql.USERNAME,
         'PASSWORD': mysql.PASSWORD,
@@ -114,16 +118,30 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+#LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'zh-Hans'
+#
+# TIME_ZONE = 'UTC'
+#
+# USE_I18N = True
+#
+# USE_L10N = True
+#
+# USE_TZ = True
 
-TIME_ZONE = 'UTC'
+
+FILE_CHARSET = 'utf-8'
+DEFAULT_CHARSET = 'utf-8'
+
+LANGUAGE_CODE = 'zh-hans'
+
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
