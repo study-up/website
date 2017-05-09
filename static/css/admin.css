@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.head{
+    width: 100%;
+    min-width: 1090px;
+    height: 40px;
+    background: #ccc;
+    padding-top: 110px;
+}
+.nav{
+    overflow: hidden;
+    width: 480px;
+    margin: auto; 
+}
+.nav>li{
+    float: left;
+    list-style: none;
+    padding: 0 20px;
+}
+.nav>li>a{
+    text-decoration: none;
+}
