@@ -50,7 +50,7 @@ SECRET_KEY = 'w4(-2s2l+4m(da8=@-6gy39dkpnb2s9g1*58j&=yuop&&s=vk1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*', ]
 
 
 # Application definition
@@ -135,7 +135,7 @@ DEFAULT_CHARSET = 'utf-8'
 
 LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'Asia/Shanghai'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -147,3 +147,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(os.path.dirname(__file__), "../static/")
+
+STATICFILES_DIRS = (
+    ('css', os.path.join(STATIC_ROOT, 'css').replace('\\', '/')),
+    ('js', os.path.join(STATIC_ROOT, 'js').replace('\\', '/')),
+    ('images', os.path.join(STATIC_ROOT, 'images').replace('\\', '/')),
+    ('fonts', os.path.join(STATIC_ROOT, 'fonts').replace('\\', '/')),
+    ('font-awesome', os.path.join(STATIC_ROOT, 'fonts').replace('\\', '/')),
+    ('UE', os.path.join(STATIC_ROOT, 'UE').replace('\\', '/')),
+)
