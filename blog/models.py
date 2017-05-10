@@ -28,8 +28,9 @@ class Note(BaseModel):
     def __str__(self):
         return self.title
 
-    # def get_abs_url(self):
-    #     return reverse('detail', args=[self.publish.year,
-    #                                    self.publish.strftime('%m'),
-    #                                    self.publish.strftime('%d'),
-    #                                    self.id])
+    def get_absolute_url(self):
+        return reverse('note_detail',
+                       args=[self.publish.year,
+                             self.publish.strftime('%m'),
+                             self.publish.strftime('%d'),
+                             self.id])

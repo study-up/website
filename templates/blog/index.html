@@ -3,13 +3,25 @@
 
 
 {% block header %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
 {% include 'public/nav.html' %}
 {% endblock %}
 
 {% block content %}
 {% for note in notes %}
-<div>
-<a href="{{ note.get_abs_url }}">{{ note.title}}</a>
+
+
+<div class="blog">
+    <figure>
+        <a>
+            <img src="">
+        </a>
+        <p>
+            <a href="{{ note.get_absolute_url }}">{{ note.title}}</a>
+        </p>
+        <figcaption>{{ note.body}}</figcaption>
+    </figure>
 </div>
 {% endfor %}
+
 {% endblock %}

@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 12px;
+    background: #226039 center 0 scroll no-repeat;
+    color: #5d5d5d;
+}
+
+.blog {
+    width: 1000px;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.blog figure {
+    background: #ececec;
+    border: #FFF 10px solid;
+    width: 300px;
+    height: 430px;
+    float: left;
+    margin: 0 5px;
+}
+
+.blog figure p a {
+    color: #226039;
+}
+
+.blog figure figcaption {
+    padding: 10px;
+    line-height: 22px;
+    color: #666;
+}
