@@ -6,6 +6,7 @@ from django.db import models
 from core.models import BaseModel
 from django.utils import timezone
 from django.core.urlresolvers import reverse
+from taggit.managers import TaggableManager
 
 
 class PublishedManager(models.Manager):
@@ -21,6 +22,7 @@ class Note(BaseModel):
     status = models.CharField(max_length=10, choices=STATUS, default='draft')  # 标记笔记状态，暂分为草稿和发布
     objects = models.Manager()  # 默认的查询集
     published = PublishedManager()  # 自定义的查询集
+    tags = TaggableManager()
 
     class Meta:
         ordering = ('-publish',)

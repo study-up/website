@@ -1,28 +1,19 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/index.css' %}">
-<img src="{% static 'images/a.jpg' %}" style="height: 280px; width: 1363px;">
-<div>
-    <div>
-        <nav class="navbar navbar-default navbar-static-bottom">
-            <div class="container-fluid">
-                <div class="navbar-header"></div>
-                <div class="navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="{% url 'home' %}">首页</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'note_list' %}?page=1">随笔</a>
-                        </li>
-                        <li>
-                            <a>留言板</a>
-                        </li>
-                        <li>
-                            <a>我</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+<link rel="stylesheet" href="{% static 'css/nav.css' %}">
+<header>
+<div class="quotes">
+    <p>我狠话放这里了，以后谁再打扰我学习，我就和你们一起玩。</p>
+    <div class="text5">随笔</div>
+    <div class="flower">
+        <img src="{% static 'images/flower.jpg' %}">
     </div>
 </div>
+<div id="nav">
+    <ul>
+        <li><a href="{% url 'home' %}">首页</a></li>
+        <li><a href="{% url 'note_list' %}?page=1">笔记</a></li>
+        <li><a>留言板</a></li>
+        <li><a>我</a></li>
+    </ul>
+</div>
+</header>

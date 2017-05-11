@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 12px;
+    background: #226039 center 0 scroll no-repeat;
+    color: #5d5d5d;
+}
+
+.blog {
+    width: 1000px;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.blog figure {
+    background: #ececec;
+    border: #FFF 10px solid;
+    width: 300px;
+    height: 430px;
+    float: left;
+    margin: 0 5px 5px 5px;
+}
+
+.blog figure p a {
+    color: #226039;
+}
+
+.blog figure figcaption {
+    padding: 10px;
+    line-height: 22px;
+    color: #666;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+.blog figure img {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+img {
+    border: 0;
+}
+
+.text6 {
+    font-family: "微软雅黑";
+    font-size: 30px;
+    color: #FFF;
+    -webkit-box-reflect: below 1px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(white));
+    width: 1000px;
+    margin: auto;
+}
+
+.msg {
+    border-top: 50px #559664 solid;
+    padding: 20px;
+    color: #FFF;
+}
+
+.msg ul {
+    width: 1000px;
+    margin: auto;
+    background: url(../images/love.png) no-repeat left center;
+    overflow: hidden;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+.visitors {
+    width: 500px;
+    float: right;
+}
+
+.visitors dl {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.visitors dt {
+    float: left;
+}
+
+.visitors dt img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 100%;
+}
+
+.visitors dt+dd {
+    margin-top: 20px;
+}
+
+.visitors dd {
+    line-height: 22px;
+}
+
+.visitors dd a {
+    color: #d2ec40;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+.visitors dd {
+    line-height: 22px;
+}
