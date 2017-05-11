@@ -80,7 +80,6 @@ a.readmore {
     clear: both;
     margin: 10px 0 0 0;
     display: inline-block;
-    background: #f6f6f6 url(../images/time.jpg) 15px center no-repeat;
     line-height: 26px;
     height: 26px;
     color: #838383;
@@ -120,4 +119,61 @@ a:link, a:visited {
 }
 .rank {
     margin: 10px 0;
+}
+
+
+//detail.html
+.index_about {
+    float: left;
+    width: 740px;
+    overflow: hidden;
+    background: url(../images/r_line.jpg) repeat-y right;
+    margin: 10px 0;
+}
+.c_tile {
+    font-size: 22px;
+    margin: 20px 0;
+    text-align: center;
+    color: #333;
+}
+.box_c {
+    border: #ccc 1px dashed;
+    text-align: center;
+    padding: 5px 0;
+    margin-right: 30px;
+    color: #999;
+}
+.box_c span {
+    margin: 0 10px;
+}
+.box_c span {
+    margin: 0 10px;
+}
+.box_c span a {
+    color: #099;
+}
+a:link, a:visited {
+    text-decoration: none;
+    color: #333;
+}
+ul.infos {
+    overflow: hidden;
+    margin: 20px 30px 20px 0;
+    line-height: 28px;
+    font-size: 14px;
+    text-indent: 2em;
+    color: #666;
+}
+.keybq {
+    line-height: 30px;
+    height: 30px;
+    padding-left: 40px;
+    border: 1px solid #F0F0F0;
+    margin-right: 20px;
+}
+.keybq span {
+    color: #099;
+}
+.nextinfo {
+    line-height: 24px;
 }

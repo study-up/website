@@ -7,9 +7,31 @@
 {% endblock %}
 
 {% block content %}
-<h1>{{ note.title }}</h1>
-<p class="date">
-    发布时间 {{ note.publish }}
-</p>
-{{ note.body|linebreaks }}
+<article style="background-color: #fff;">
+<div class="index_about">
+    <h2 class="c_title">标题</h2>
+    <p class="box_c">
+        <span class="d_time">时间</span>
+        <span>作者</span>
+    </p>
+    <ul class="infos">
+        内容
+    </ul>
+    <div class="keybq">
+        <p>
+            <span>关键词</span>XXX
+        </p>
+    </div>
+    <div class="nextinfo">
+        <p>
+            上一篇：<a>XXX</a>
+        </p>
+        <p>
+            下一篇：<a>YYY</a>
+        </p>
+    </div>
+
+</div>
+    {% include 'blog/right.html' %}
+</article>
 {% endblock %}

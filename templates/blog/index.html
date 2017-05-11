@@ -14,84 +14,26 @@
         <p>随笔<span>展示</span></p>
     </h2>
     <div class="bloglist left">
+        {% for note in notes %}
         <h3>
-            <a>标题</a>
+            <a href="{{ note.get_absolute_url }}">{{ note.title}}</a>
         </h3>
         <figure>
             <img src="{% static 'images/note1.jpg'%}">
         </figure>
         <ul>
-            <p>内容</p>
+            <p>{{ note.body }}</p>
             <a>阅读全文</a>
         </ul>
         <p class="dateview">
-            <span>日期</span>
-            <span>作者</span>
+            <span><i class="fa fa-fw fa-clock-o"></i>&nbsp;&nbsp;{{ note.publish }}</span>
+            <span>作者:付敏</span>
             <span>博客分类</span>
         </p>
-
-        <h3>
-            <a>标题</a>
-        </h3>
-        <figure>
-            <img src="{% static 'images/note1.jpg'%}">
-        </figure>
-        <ul>
-            <p>内容</p>
-            <a>阅读全文</a>
-        </ul>
-        <p class="dateview">
-            <span>日期</span>
-            <span>作者</span>
-            <span>博客分类</span>
-        </p>
+        {% endfor %}
 
     </div>
-    <aside class="right">
-        <div class="news">
-            <h3>
-                <p>
-                    <span>随笔</span>分类
-                </p>
-            </h3>
-            <ul class="rank">
-                <li>标题</li>
-            </ul>
-
-            <h3>
-                <p>
-                    <span>日期</span>分类
-                </p>
-            </h3>
-            <ul class="rank">
-                <li>标题</li>
-            </ul>
-
-            <h3>
-                <p>
-                    <span>评论</span>
-                </p>
-            </h3>
-            <ul class="rank">
-                <li>标题</li>
-            </ul>
-        </div>
-    </aside>
+    {% include 'blog/right.html' %}
 </article>
 
-<!--<div class="blog">-->
-<!--{% for note in notes %}-->
-    <!--<figure>-->
-        <!--<a>-->
-            <!--<img src="">-->
-        <!--</a>-->
-        <!--<p>-->
-            <!--<a href="{{ note.get_absolute_url }}">{{ note.title}}</a>-->
-        <!--</p>-->
-        <!--<p class="tags">Tags: {{ note.tags.all|join:", " }}</p>-->
-        <!--<figcaption>{{ note.body}}</figcaption>-->
-    <!--</figure>-->
-<!--{% endfor %}-->
-<!--</div>-->
-<!--{% include 'public/pagination.html' with page=notes %}-->
 {% endblock %}
