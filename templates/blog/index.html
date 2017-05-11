@@ -31,7 +31,19 @@
             <span>博客分类</span>
         </p>
         {% endfor %}
-
+        <div class="blog_page">
+            <ul>
+            {% if page.has_previous %}
+            <li><a href="?page=1"><i class="fa fa-fw fa-angle-double-left"></i></a></li>
+            <li><a href="?page={{ page.previous_page_number }}"><i class="fa fa-fw fa-angle-left"></i></a></li>
+            {% endif %}
+            <li>当前页 {{ page.number }} 总共 {{ page.paginator.num_pages }}</li>
+            {% if page.has_next %}
+            <li><a href="?page={{ page.next_page_number }}"><i class="fa fa-fw fa-angle-right"></i></a></li>
+            <li><a href="?page={{ page.paginator.num_pages }}"><i class="fa fa-fw fa-angle-double-right"></i></a><li>
+            {% endif %}
+            </ul>
+        </div>
     </div>
     {% include 'blog/right.html' %}
 </article>

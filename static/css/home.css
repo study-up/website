@@ -23,7 +23,13 @@ body {
     float: left;
     margin: 0 5px 5px 5px;
 }
-
+.blog figure p {
+    font-size: 14px;
+    text-shadow: #fff 1px 1px 0px;
+    line-height: 26px;
+    text-align: center;
+    font-weight: bold;
+}
 .blog figure p a {
     color: #226039;
 }
