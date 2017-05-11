@@ -3,15 +3,13 @@
 
 
 {% block header %}
-<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 {% include 'public/nav.html' %}
 {% endblock %}
 
 {% block content %}
-{% for note in notes %}
-
-
 <div class="blog">
+{% for note in notes %}
     <figure>
         <a>
             <img src="">
@@ -21,7 +19,7 @@
         </p>
         <figcaption>{{ note.body}}</figcaption>
     </figure>
-</div>
 {% endfor %}
-
+</div>
+{% include 'public/pagination.html' with page=notes %}
 {% endblock %}

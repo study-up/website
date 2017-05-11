@@ -1,0 +1,25 @@
+h1 {
+    font-weight:normal;
+    border-bottom:1px solid #bbb;
+    padding:0 0 10px 0;
+}
+
+p.date {
+    color:#ccc;
+    font-family: georgia, serif;
+    font-size: 12px;
+    font-style: italic;
+}
+
+label {
+    float:left;
+    clear:both;
+    color:#333;
+    margin-bottom:4px;
+}
+
+.pagination {
+    margin:40px 0;
+    font-weight:bold;
+    color: #fff;
+}

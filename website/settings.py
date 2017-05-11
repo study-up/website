@@ -154,7 +154,4 @@ STATICFILES_DIRS = (
     ('css', os.path.join(STATIC_ROOT, 'css').replace('\\', '/')),
     ('js', os.path.join(STATIC_ROOT, 'js').replace('\\', '/')),
     ('images', os.path.join(STATIC_ROOT, 'images').replace('\\', '/')),
-    ('fonts', os.path.join(STATIC_ROOT, 'fonts').replace('\\', '/')),
-    ('font-awesome', os.path.join(STATIC_ROOT, 'fonts').replace('\\', '/')),
-    ('UE', os.path.join(STATIC_ROOT, 'UE').replace('\\', '/')),
 )

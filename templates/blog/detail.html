@@ -1,2 +1,15 @@
 {% extends 'public/base.html' %}
-{{ note.body }}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% include 'public/nav.html' %}
+{% endblock %}
+
+{% block content %}
+<h1>{{ note.title }}</h1>
+<p class="date">
+    发布时间 {{ note.publish }}
+</p>
+{{ note.body|linebreaks }}
+{% endblock %}
