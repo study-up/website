@@ -1,0 +1,54 @@
+<div id="blog-comments-placeholder">
+    <div>评论列表</div>
+    <div class="feedbackItem">
+        <div class="feedbackListSubtitle">
+            <div class="feedbackManage">
+                <span>
+                    <a>回复</a>
+                    <a>引用</a>
+                </span>
+            </div>
+            <a>#1楼</a>
+            <a></a>
+            <span>时间</span>
+            <a>名称</a>
+        </div>
+        <div class="feedbackCon">
+            <div class="blog_comment_body">评论内容</div>
+            <div class="comment_vote">
+                <a>支持</a>
+                <a>反对</a>
+            </div>
+            <span></span>
+        </div>
+    </div>
+</div>
+
+
+<!--<div>-->
+    <!--{% with comments.count as total_comments %}-->
+    <!--<h2>-->
+        <!--{{ total_comments }} comment{{ total_comments|pluralize }}-->
+    <!--</h2>-->
+    <!--{% endwith %}-->
+
+
+    <!--{% for comment in comments %}-->
+    <!--<div class="comment">-->
+        <!--<p class="info">-->
+            <!--Comment {{ forloop.counter }} by {{ comment.name }}-->
+            <!--{{ comment.created }}-->
+        <!--</p>-->
+        <!--{{ comment.body|linebreaks }}-->
+    <!--</div>-->
+    <!--{% empty %}-->
+    <!--<p>暂时还没有评论.</p>-->
+    <!--{% endfor %}-->
+
+    <!--<h2>发表评论</h2>-->
+    <!--<form action="." method="post">-->
+        <!--{% csrf_token %}-->
+        <!--{{ comment_form.as_p }}-->
+        <!--<p><input type="submit" value="提交评论"></p>-->
+    <!--</form>-->
+<!--</div>-->

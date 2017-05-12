@@ -1,5 +1,5 @@
 <ul class="rank">
     {% for note in latest_notes %}
-    <li><a href="{{ note.get_absolute_url }}">{{ note.title }}</a></li>
+    <li><a href="{{ note.get_absolute_url }}"><i class="fa fa-fw fa-circle"></i>{{ note.title }}</a></li>
     {% endfor %}
 </ul>

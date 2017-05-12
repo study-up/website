@@ -12,20 +12,22 @@
 
             <h3>
                 <p>
-                    <span>日期</span>分类
+                    <span>日期</span>排序
                 </p>
             </h3>
             {% show_date_notes 6 %}
-            <!--<ul class="rank">-->
-            <!--</ul>-->
-
             <h3>
                 <p>
-                    <span>评论</span>
+                    <span>评论</span>排序
                 </p>
             </h3>
-            <ul class="rank">
-                <li>标题</li>
+            {% get_most_commented_posts as most_commented_posts %}
+            <ul class="">
+                {% for note in most_commented_posts %}
+                <li>
+                    <a href="{{ note.get_absolute_url }}"><i class="fa fa-fw fa-square"></i>{{ note.title }}</a>
+                </li>
+                {% endfor %}
             </ul>
         </div>
     </aside>

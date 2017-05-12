@@ -118,7 +118,18 @@ a.readmore {
 .rank {
     margin: 10px 0;
 }
+.rank li {
+    height: 25px;
+    line-height: 25px;
+    clear: both;
+    padding-left: 5px;
+    overflow: hidden;
+}
 
+.rank li:first-child a {
+    color: #f00;
+    display: block;
+}
 
 /*detail.html*/
 
@@ -179,4 +190,44 @@ ul.infos {
     float: left;
     margin-left: 6px;
     font-size: large;
+}
+
+
+/*comment.html*/
+#blog-comments-placeholder {
+    padding: 20px;
+    border: 1px solid #dedede;
+    padding-top: 0;
+    margin-top: 20px;
+    background: #fff;
+}
+
+.feedbackItem {
+    margin-top: 10px;
+}
+.feedbackListSubtitle {
+    padding: 0 5px;
+}
+.feedbackManage {
+    line-height: 26px;
+    float: right;
+}
+.comment_actions a {
+    padding-right: 10px;
+}
+.feedbackCon {
+    border: 1px dashed #dedede;
+    padding: 10px;
+    margin: 10px 0;
+}
+.blog_comment_body {
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.comment_vote {
+    text-align: right;
+}
+.comment_vote a {
+    text-decoration: none!important;
+    padding-left: 10px;
 }

@@ -37,3 +37,15 @@ class Note(BaseModel):
                              self.publish.strftime('%m'),
                              self.publish.strftime('%d'),
                              self.id])
+
+
+class Comment(BaseModel):
+    note = models.ForeignKey(Note, related_name='comments')
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return 'Comment by {} on {}'.format(self.name, self.note)
+
