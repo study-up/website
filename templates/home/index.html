@@ -1,7 +1,6 @@
 {% extends 'public/base.html' %}
 {% load static %}
 
-
 {% block header %}
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 {% include 'public/nav.html' %}
@@ -12,13 +11,13 @@
 {% for note in notes %}
     <figure>
         <a>
-            <img src="{% static 'images/portrait.jpg' %}">
+            <img src="{{ note.images.url|default:'' }}">
         </a>
         <p>
             <a href="{{ note.get_absolute_url }}">{{ note.title}}</a>
         </p>
         <p class="tags">Tags: {{ note.tags.all|join:", " }}</p>
-        <figcaption>{{ note.body}}</figcaption>
+        <figcaption>{{ note.body|truncatewords:15|linebreaks }}</figcaption>
     </figure>
 {% endfor %}
 </div>

@@ -65,9 +65,7 @@ img {
     line-height: 20px;
     padding-right: 	20px;
 }
-.bloglist ul >a {
-    float: right;
-}
+
 ul {
     list-style: none;
 }
@@ -76,7 +74,7 @@ a.readmore {
     color: #fff;
     padding: 5px 10px;
     float: right;
-    margin: 20px 0 0 0;
+    margin: 10px 0 0 0;
 }
 .dateview {
     width: 695px;

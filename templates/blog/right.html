@@ -1,3 +1,4 @@
+{% load blog_tag %}
 <aside class="right">
         <div class="news">
             <h3>
@@ -14,9 +15,9 @@
                     <span>日期</span>分类
                 </p>
             </h3>
-            <ul class="rank">
-                <li>标题</li>
-            </ul>
+            {% show_date_notes 6 %}
+            <!--<ul class="rank">-->
+            <!--</ul>-->
 
             <h3>
                 <p>

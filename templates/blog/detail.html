@@ -9,13 +9,15 @@
 {% block content %}
 <article style="background-color: #fff;">
 <div class="index_about">
-    <h2 class="c_title">标题</h2>
+    <h2 class="c_title">{{ note.title }}</h2>
     <p class="box_c">
-        <span class="d_time">时间</span>
-        <span>作者</span>
+        <span class="d_time">{{ note.publish }}</span>
+        <span>作者:付敏</span>
     </p>
     <ul class="infos">
-        内容
+        {% autoescape off %}
+        {{ note.body }}
+        {% endautoescape %}
     </ul>
     <div class="keybq">
         <p>

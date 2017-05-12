@@ -1,6 +1,6 @@
 body {
     font-size: 12px;
-    background: #226039 url(../images/bg.jpg) center 0 scroll no-repeat;
+    background: #226039 url(../images/bg.gif) center 0 scroll no-repeat;
     color: #5d5d5d;
 }
 
@@ -13,7 +13,7 @@ header {
 .quotes {
     width: 1000px;
     position: relative;
-    margin: 140px auto 120px auto;
+    margin: 123px auto 120px auto;
 }
 
 .quotes p {

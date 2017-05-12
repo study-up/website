@@ -19,11 +19,11 @@
             <a href="{{ note.get_absolute_url }}">{{ note.title}}</a>
         </h3>
         <figure>
-            <img src="{% static 'images/note1.jpg'%}">
+            <img src="{{ note.images.url }}">
         </figure>
         <ul>
-            <p>{{ note.body }}</p>
-            <a>阅读全文</a>
+            <p>{{ note.body|truncatewords:30|linebreaks }}</p>
+            <a class="readmore" href="{{ note.get_absolute_url }}">阅读全文</a>
         </ul>
         <p class="dateview">
             <span><i class="fa fa-fw fa-clock-o"></i>&nbsp;&nbsp;{{ note.publish }}</span>

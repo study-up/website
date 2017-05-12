@@ -20,6 +20,7 @@ class Note(BaseModel):
     body = models.TextField()
     publish = models.DateTimeField(default=timezone.now)  # 发布时间
     status = models.CharField(max_length=10, choices=STATUS, default='draft')  # 标记笔记状态，暂分为草稿和发布
+    images = models.ImageField(upload_to='img', null=True)
     objects = models.Manager()  # 默认的查询集
     published = PublishedManager()  # 自定义的查询集
     tags = TaggableManager()
