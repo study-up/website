@@ -1,5 +1,9 @@
 <div id="blog-comments-placeholder">
-    <div>评论列表</div>
+    {% with comments.count as total_comments %}
+    <div>评论列表 {{ total_comments }} comment{{ total_comments|pluralize }}</div>
+    {% endwith %}
+
+    {% for comment in comments %}
     <div class="feedbackItem">
         <div class="feedbackListSubtitle">
             <div class="feedbackManage">
@@ -10,11 +14,11 @@
             </div>
             <a>#1楼</a>
             <a></a>
-            <span>时间</span>
-            <a>名称</a>
+            <span>{{ comment.created }}</span>
+            <a>{ comment.name }}</a>
         </div>
         <div class="feedbackCon">
-            <div class="blog_comment_body">评论内容</div>
+            <div class="blog_comment_body">{{ comment.body|linebreaks }}</div>
             <div class="comment_vote">
                 <a>支持</a>
                 <a>反对</a>
@@ -22,6 +26,29 @@
             <span></span>
         </div>
     </div>
+    {% empty %}
+    <p>暂时还没有评论.</p>
+    {% endfor %}
+</div>
+
+<div id="comment_form_container">
+    <form action="." method="post">
+        {% csrf_token %}
+    <div id="comment_form_title">发表评论</div>
+    <span id="tip_comment" style="color:Red"></span>
+    <p>
+        昵称{{ comment_form.name }}
+    </p>
+    <div class="commentbox_main">
+        <div class="commentbox_title">
+            <div class="commentbox_title_left">评论内容</div>
+            <div>{{ comment_form.body }}</div>
+        </div>
+    </div>
+    <p id="commentbox_opt">
+        <input value="提交评论">
+    </p>
+    </form>
 </div>
 
 

@@ -139,6 +139,7 @@ a.readmore {
     overflow: hidden;
     background: url(../images/r_line.jpg) repeat-y right;
     margin: 10px 0;
+    padding-right: 36px;
 }
 .c_title {
     font-size: 22px;
@@ -150,7 +151,6 @@ a.readmore {
     border: #ccc 1px dashed;
     text-align: center;
     padding: 5px 0;
-    margin-right: 30px;
     color: #999;
 }
 .box_c span {
@@ -176,7 +176,6 @@ ul.infos {
     height: 30px;
     padding-left: 40px;
     outline: 1px solid #F0F0F0;
-    margin-right: 20px;
 }
 .keybq span {
     color: #099;
@@ -195,9 +194,8 @@ ul.infos {
 
 /*comment.html*/
 #blog-comments-placeholder {
-    padding: 20px;
+    padding: 0 30px 30px 30px;
     border: 1px solid #dedede;
-    padding-top: 0;
     margin-top: 20px;
     background: #fff;
 }
@@ -230,4 +228,45 @@ ul.infos {
 .comment_vote a {
     text-decoration: none!important;
     padding-left: 10px;
+}
+
+
+/* comment bottom*/
+#comment_form_container {
+    border: 1px solid #dedede;
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 30px;
+}
+#commentform_title {
+    background-repeat: no-repeat;
+    padding: 0 0 0 25px;
+    margin-bottom: 10px;
+}
+
+div.commentform p {
+    margin-top: 10px;
+    line-height: 20px;
+}
+.commentbox_title {
+    width: 450px;
+}
+.commentbox_title_left {
+    float: left;
+}
+div.commentform p {
+    margin-top: 10px;
+    line-height: 20px;
+}
+
+input[type=button] {
+    -webkit-appearance: button;
+}
+
+.comment_btn {
+    height: 26px;
+    width: 68px;
+    margin: 0;
+    padding: 0;
+    line-height: 22px;
 }
