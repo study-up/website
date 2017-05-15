@@ -1,0 +1,22 @@
+{% extends 'public/base.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% include 'public/nav.html' %}
+{% endblock %}
+
+{% block content %}
+<div class="layout-background">
+    <div>留言板</div>
+    <div>博主寄语</div>
+    <div>发表您的留言</div>
+    <div>
+        {% for msg in messages %}
+        <img src="{{ msg.image.url|default:'' }}">
+        {{ msg.name }}
+        {{ msg.content }}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

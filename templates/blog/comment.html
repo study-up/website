@@ -8,20 +8,20 @@
         <div class="feedbackListSubtitle">
             <div class="feedbackManage">
                 <span>
-                    <a>回复</a>
-                    <a>引用</a>
+                    <!--<a>回复</a>-->
+                    <!--<a>引用</a>-->
                 </span>
             </div>
-            <a>#1楼</a>
+            <!--<a>#1楼</a>-->
             <a></a>
-            <span>{{ comment.created }}</span>
-            <a>{ comment.name }}</a>
+            <span>{{ comment.created }}&nbsp;&nbsp;</span>
+            <a>{{ comment.name }}</a>
         </div>
         <div class="feedbackCon">
             <div class="blog_comment_body">{{ comment.body|linebreaks }}</div>
             <div class="comment_vote">
-                <a>支持</a>
-                <a>反对</a>
+                <!--<a>支持</a>-->
+                <!--<a>反对</a>-->
             </div>
             <span></span>
         </div>
@@ -31,13 +31,18 @@
     {% endfor %}
 </div>
 
+
 <div id="comment_form_container">
+    {% include 'public/message.html' %}
     <form action="." method="post">
         {% csrf_token %}
     <div id="comment_form_title">发表评论</div>
     <span id="tip_comment" style="color:Red"></span>
     <p>
         昵称{{ comment_form.name }}
+    </p>
+    <p>
+        email{{ comment_form.email }}
     </p>
     <div class="commentbox_main">
         <div class="commentbox_title">
@@ -46,7 +51,7 @@
         </div>
     </div>
     <p id="commentbox_opt">
-        <input value="提交评论">
+        <input class="comment_btn" type="submit" value="提交评论">
     </p>
     </form>
 </div>

@@ -25,56 +25,17 @@
 <div class="msg">
     <ul>
         <div class="visitors">
-
+            {% for msg in blessings %}
             <dl>
                 <dt>
-                    <img src="{% static 'images/portrait.jpg' %}">
+                    <img src="{{ msg.image.url|default:'' }}">
                 </dt>
                 <dd>
-                    <a>留言者昵称</a>
+                    <a>{{ msg.name }}</a>
                 </dd>
-                <dd>留言</dd>
+                <dd>{{ msg.content }}</dd>
             </dl>
-
-            <dl>
-                <dt>
-                    <img src="{% static 'images/portrait.jpg' %}">
-                </dt>
-                <dd>
-                    <a>留言者昵称</a>
-                </dd>
-                <dd>留言</dd>
-            </dl>
-
-            <dl>
-                <dt>
-                    <img src="{% static 'images/portrait.jpg' %}">
-                </dt>
-                <dd>
-                    <a>留言者昵称</a>
-                </dd>
-                <dd>留言</dd>
-            </dl>
-
-            <dl>
-                <dt>
-                    <img src="{% static 'images/portrait.jpg' %}">
-                </dt>
-                <dd>
-                    <a>留言者昵称</a>
-                </dd>
-                <dd>留言</dd>
-            </dl>
-
-            <dl>
-                <dt>
-                    <img src="{% static 'images/portrait.jpg' %}">
-                </dt>
-                <dd>
-                    <a>留言者昵称</a>
-                </dd>
-                <dd>留言</dd>
-            </dl>
+            {% endfor %}
 
         </div>
     </ul>

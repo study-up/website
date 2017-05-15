@@ -1,8 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Author  :may
+
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.base import View
 from blog.models import Note
 from blog.forms import CommentForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.contrib import messages
 import datetime
 
 
@@ -29,6 +34,9 @@ class BlogCtl(View):
                 new_comment = comment_form.save(commit=False)
                 new_comment.note = note
                 new_comment.save()
+                messages.add_message(request, messages.SUCCESS, '添加成功')
+            else:
+                messages.add_message(request, messages.ERROR, comment_form.errors.as_text())
         else:
             comment_form = CommentForm()
         return render(request, 'blog/detail.html', {'note': note, 'comments': comments, 'comment_form': comment_form})

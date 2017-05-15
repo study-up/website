@@ -20,15 +20,15 @@
     <div class="keybq">
         <p>
             <i class="fa fa-1x fa-tags"></i>
-            <span>关键词</span>XXX
+            <span>关键词</span>{{ note.tags.all|join:", " }}
         </p>
     </div>
     <div class="nextinfo">
         <p>
-            上一篇：<a>XXX</a>
+            上一篇：<a href="{{ note.get_previous_by_publish.get_absolute_url }}">{{ note.get_previous_by_publish.title|default:'None' }}</a>
         </p>
         <p>
-            下一篇：<a>YYY</a>
+            下一篇：<a href="{{ note.get_next_by_publish.get_absolute_url }}">{{ note.get_next_by_publish.title|default:'None' }}</a>
         </p>
     </div>
     {% include 'blog/comment.html' %}
