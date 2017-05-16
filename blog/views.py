@@ -9,11 +9,16 @@ from blog.forms import CommentForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
 import datetime
+from taggit.models import Tag
+from django.db.models import Count
 
 
 class BlogCtl(View):
-    def index(self, request):
+    def index(self, request, tag_slug=None):
         note_list = Note.published.all()
+        if tag_slug:
+            tag = get_object_or_404(Tag, slug=tag_slug)
+            note_list = note_list.filter(tags__in=[tag])
         paginator = Paginator(note_list, 3)
         page = request.GET.get('page')
         try:
@@ -39,5 +44,9 @@ class BlogCtl(View):
                 messages.add_message(request, messages.ERROR, comment_form.errors.as_text())
         else:
             comment_form = CommentForm()
-        return render(request, 'blog/detail.html', {'note': note, 'comments': comments, 'comment_form': comment_form})
+        note_tags_id = note.tags.values_list('id', flat=True)
+        similar_note = Note.published.filter(tags__in=note_tags_id).exclude(id=uid)
+        similar_posts = similar_note.annotate(same_tags=Count('tags')).order_by('-same_tags', '-publish')
+        return render(request, 'blog/detail.html', {'note': note, 'comments': comments, 'comment_form': comment_form,
+                                                    'similar_posts': similar_posts})
 

@@ -28,7 +28,12 @@
         <p class="dateview">
             <span><i class="fa fa-fw fa-clock-o"></i>&nbsp;&nbsp;{{ note.publish }}</span>
             <span>作者:付敏</span>
-            <span>博客分类</span>
+            <span>
+                {% for tag in note.tags.all %}
+                <a href="{% url 'note_list_by_tag' tag.slug %}">{{ tag.name }}</a>
+                {% if not forloop.last %}, {% endif %}
+                {% endfor %}
+            </span>
         </p>
         {% endfor %}
         <div class="blog_page">

@@ -10,7 +10,7 @@ class BaseModel(models.Model):
     '''
     基本model
     '''
-    id = models.UUIDField(unique=True, default=uuid.uuid4, primary_key=True)
+    # id = models.UUIDField(unique=True, default=uuid.uuid4, primary_key=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

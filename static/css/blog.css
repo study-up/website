@@ -190,6 +190,26 @@ ul.infos {
     margin-left: 6px;
     font-size: large;
 }
+.otherlink h2 {
+    border-bottom: #099 2px solid;
+    line-height: 40px;
+    font-size: 12px;
+    font-weight: normal;
+    margin-right: 20px;
+    padding-left: 40px;
+}
+.otherlink ul {
+    margin: 10px 0;
+}
+.otherlink li {
+    line-height: 24px;
+    height: 24px;
+    display: block;
+    width: 290px;
+    float: left;
+    overflow: hidden;
+    margin-right: 30px;
+}
 
 
 /*comment.html*/

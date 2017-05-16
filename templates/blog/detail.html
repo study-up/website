@@ -31,6 +31,16 @@
             下一篇：<a href="{{ note.get_next_by_publish.get_absolute_url }}">{{ note.get_next_by_publish.title|default:'None' }}</a>
         </p>
     </div>
+    <div class="otherlink">
+        <h2>相关文章</h2>
+        <ul>
+            {% for note in similar_posts %}
+            <li>
+                <a href="{{ note.get_absolute_url }}">{{ note.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
     {% include 'blog/comment.html' %}
 </div>
     {% include 'blog/right.html' %}
