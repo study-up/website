@@ -7,16 +7,47 @@
 {% endblock %}
 
 {% block content %}
-<div class="layout-background">
-    <div>留言板</div>
-    <div>博主寄语</div>
-    <div>发表您的留言</div>
+<div class="page">
     <div>
-        {% for msg in messages %}
-        <img src="{{ msg.image.url|default:'' }}">
-        {{ msg.name }}
-        {{ msg.content }}
-        {% endfor %}
+        <p class="leave_title">留言板</p>
+        <hr>
+        <span class="leave_my">主人寄语</span>
+        <span class="leave_my_edit">编辑你的寄语</span>
+        <hr>
+        <div>
+            <p><img src="test.jpg" class="leave_my_text"/>的看法过户而灵活vopoiegf啊啊你贷款方丽君电视里的客户拒爱好就是狗屁话换个奥会很高二是科技hi哦好个</p>
+        </div>
+        <ul class="leave_set">
+            <li>留言</li>
+            <li>留言板设置</li>
+            <li>上一页</li>
+            <li>下一页</li>
+        </ul>
+        <hr>
     </div>
-</div>
+    <div>
+        <div class="message">
+            <div class="message_left">
+                <img src="test.png"/>
+                <img src="test.png"/>
+            </div>
+            <div class="message_right">
+                <ul class="message_right_top">
+                    <li>名字</li>
+                    <li>等级</li>
+                    <li>沙发</li>
+                    <li>引用</li>
+                    <li>菜单</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>>
+
+
+
+
+
 {% endblock %}
