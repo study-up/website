@@ -1,6 +1,7 @@
+{% load markdown_deux_tags %}
 <div id="blog-comments-placeholder">
     {% with comments.count as total_comments %}
-    <div>评论列表 {{ total_comments }} comment{{ total_comments|pluralize }}</div>
+    <div>评论列表 ({{ total_comments }})</div>
     {% endwith %}
 
     {% for comment in comments %}
@@ -38,12 +39,14 @@
         {% csrf_token %}
     <div id="comment_form_title">发表评论</div>
     <span id="tip_comment" style="color:Red"></span>
+        <!--{{ comment_form.as_p }}-->
     <p>
         昵称{{ comment_form.name }}
     </p>
     <p>
         email{{ comment_form.email }}
     </p>
+
     <div class="commentbox_main">
         <div class="commentbox_title">
             <div class="commentbox_title_left">评论内容</div>
@@ -54,33 +57,7 @@
         <input class="comment_btn" type="submit" value="提交评论">
     </p>
     </form>
+
 </div>
 
 
-<!--<div>-->
-    <!--{% with comments.count as total_comments %}-->
-    <!--<h2>-->
-        <!--{{ total_comments }} comment{{ total_comments|pluralize }}-->
-    <!--</h2>-->
-    <!--{% endwith %}-->
-
-
-    <!--{% for comment in comments %}-->
-    <!--<div class="comment">-->
-        <!--<p class="info">-->
-            <!--Comment {{ forloop.counter }} by {{ comment.name }}-->
-            <!--{{ comment.created }}-->
-        <!--</p>-->
-        <!--{{ comment.body|linebreaks }}-->
-    <!--</div>-->
-    <!--{% empty %}-->
-    <!--<p>暂时还没有评论.</p>-->
-    <!--{% endfor %}-->
-
-    <!--<h2>发表评论</h2>-->
-    <!--<form action="." method="post">-->
-        <!--{% csrf_token %}-->
-        <!--{{ comment_form.as_p }}-->
-        <!--<p><input type="submit" value="提交评论"></p>-->
-    <!--</form>-->
-<!--</div>-->

@@ -3,7 +3,16 @@
 # @Author  :may
 
 from django import forms
-from blog.models import Comment
+from blog.models import Note, Comment
+from pagedown.widgets import AdminPagedownWidget
+
+
+class NoteForm(forms.ModelForm):
+    body = forms.CharField(widget=AdminPagedownWidget())
+
+    class Meta:
+        model = Note
+        fields = '__all__'
 
 
 class CommentForm(forms.ModelForm):

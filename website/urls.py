@@ -25,6 +25,8 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^blog/', include('blog.urls')),
     url(r'^msgborad/', include('guestbook.urls')),
+    url(r'^mood/', include('mood.urls')),
+    url(r'^resume/', include('resume.urls')),
     url(r'^$', index, name='home'),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 ]

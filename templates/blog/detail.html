@@ -1,8 +1,11 @@
 {% extends 'public/base.html' %}
 {% load static %}
+{% load markdown_deux_tags %}
 
 {% block header %}
 <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<link rel="stylesheet" href="{% static 'css/jquery-sinaEmotion-2.1.0.min.css' %}">
+<script src="{% static 'js/jquery-sinaEmotion-2.1.0.min.js' %}"></script>
 {% include 'public/nav.html' %}
 {% endblock %}
 
@@ -15,7 +18,7 @@
         <span>作者:付敏</span>
     </p>
     <ul class="infos">
-        {{ note.body }}
+        {{ note.body|markdown }}
     </ul>
     <div class="keybq">
         <p>
@@ -45,4 +48,8 @@
 </div>
     {% include 'blog/right.html' %}
 </article>
+{% endblock %}
+
+{% block footer %}
+{% include 'public/footer.html' %}
 {% endblock %}

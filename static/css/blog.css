@@ -221,6 +221,12 @@ ul.infos {
     background: #fff;
 }
 
+#comment_form_title {
+    background-repeat: no-repeat;
+    padding: 0 0 0 25px;
+    margin-bottom: 10px;
+}
+
 .feedbackItem {
     margin-top: 10px;
 }
@@ -293,56 +299,3 @@ input[type=button] {
 }
 
 
-/* msg_board*/
-.page{
-    width: 960px;
-    margin: auto;
-    padding: 20px;
-    background: #fff;
-    margin-top:20px;
-}
-.leave_title{
-    font-size: 16px;
-    color: blue;
-}
-.leave_my_edit{
-    font-size: 14px;
-    color: #999;
-    padding-left:20px;
-}
-.leave_my{
-    font-size: 18px;
-    color: #fff;
-}
-.leave_my_text{
-    float: left;
-}
-.leave_set{
-    overflow: hidden;
-    padding: 0;
-}
-.leave_set li{
-    float: left;
-    margin-left:15px;
-}
-.leave_set li:first-child{
-    margin-left:0;
-}
-.leave_set li:nth-child(3){
-    float: right;
-}
-.leave_set li:nth-child(4){
-    float: right;
-}
-.message{
-    overflow: hidden;
-    margin-top: 20px;
-}
-.message_left{
-    float: left;
-    width: 150px;
-}
-.message_right{
-    float: left;
-    width: 745;
-}

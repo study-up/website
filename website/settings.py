@@ -67,6 +67,10 @@ INSTALLED_APPS = (
     'taggit',
     'guestbook',
     'home',
+    'pagedown',
+    'markdown_deux',
+    'mood',
+    'resume',
 )
 
 MIDDLEWARE_CLASSES = (
