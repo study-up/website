@@ -14,6 +14,14 @@ class NoteForm(forms.ModelForm):
         model = Note
         fields = '__all__'
 
+    def clean_title(self):
+        try:
+            note = Note.objects.get(title=self.cleaned_data.get('title'))
+            if note:
+                raise forms.ValidationError('博客名已存在')
+        except Note.DoesNotExist:
+            return self.cleaned_data.get('title')
+
 
 class CommentForm(forms.ModelForm):
     class Meta:

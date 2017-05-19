@@ -20,5 +20,5 @@ def show_date_notes(count=5):
 
 
 @register.assignment_tag
-def get_most_commented_posts(count=10):
+def get_most_commented_posts(count=12):
     return Note.published.annotate(total_comments=Count('comments')).order_by('-total_comments')[:count]

@@ -1,28 +1,36 @@
 {% load blog_tag %}
 <aside class="right">
         <div class="news">
-            <!--<h3>-->
-                <!--<p>-->
-                    <!--<span>随笔</span>分类-->
-                <!--</p>-->
-            <!--</h3>-->
-            <!--<ul class="rank">-->
-                <!--<li>标题</li>-->
-            <!--</ul>-->
+            <div class="side-nav">
+                <ul class="clearfix">
+                    <li class="nav-1">
+                        <a>关于我</a>
+                    </li>
+                    <li class="nav-2">
+                        <a>XXXX</a>
+                    </li>
+                    <li class="nav-3">
+                        <a>YYYY</a>
+                    </li>
+                    <li class="nav-4">
+                        <a>ZZZZ</a>
+                    </li>
+                </ul>
+            </div>
 
             <h3>
                 <p>
                     <span>日期</span>排序
                 </p>
             </h3>
-            {% show_date_notes 6 %}
+            {% show_date_notes 12 %}
             <h3>
                 <p>
                     <span>评论</span>排序
                 </p>
             </h3>
             {% get_most_commented_posts as most_commented_posts %}
-            <ul class="">
+            <ul class="rank">
                 {% for note in most_commented_posts %}
                 <li>
                     <a href="{{ note.get_absolute_url }}"><i class="fa fa-fw fa-square"></i>{{ note.title }}</a>
