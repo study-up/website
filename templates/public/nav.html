@@ -1,5 +1,6 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+<script src="{% static 'js/nav.js' %}"></script>
 <header>
 <div class="quotes">
     <p>我狠话放这里了，以后谁再打扰我学习，我就和你们一起玩。</p>
@@ -10,7 +11,7 @@
 </div>
 <div id="nav">
     <ul>
-        <li><a href="{% url 'home' %}">首页</a></li>
+        <li class="active"><a  href="{% url 'home' %}">首页</a></li>
         <li><a href="{% url 'note_list' %}?page=1">随笔</a></li>
         <li><a href="{% url 'mood_index' %}">心情</a></li>
         <li><a href="{% url 'msg_index' %}">留言板</a></li>
