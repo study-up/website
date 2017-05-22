@@ -3,7 +3,7 @@
 
 {% block header %}
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
-{% include 'public/nav.html' %}
+{% include 'public/nav.html' with pageName="home" %}
 {% endblock %}
 
 {% block content %}

@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 <link rel="stylesheet" href="{% static 'css/jquery-sinaEmotion-2.1.0.min.css' %}">
 <script src="{% static 'js/jquery-sinaEmotion-2.1.0.min.js' %}"></script>
-{% include 'public/nav.html' %}
+{% include 'public/nav.html' with pageName='blog_detail' %}
 {% endblock %}
 
 {% block content %}

@@ -11,11 +11,11 @@
 </div>
 <div id="nav">
     <ul>
-        <li class="active"><a  href="{% url 'home' %}">首页</a></li>
-        <li><a href="{% url 'note_list' %}?page=1">随笔</a></li>
-        <li><a href="{% url 'mood_index' %}">心情</a></li>
-        <li><a href="{% url 'msg_index' %}">留言板</a></li>
-        <li><a href="{% url 'resume_index' %}">我</a></li>
+        <li {% if pageName == 'home' %}class="active"{% endif %}><a  href="{% url 'home' %}">首页</a></li>
+        <li {% if pageName == 'blog_index' or pageName == 'blog_detail' %}class="active"{% endif %}><a href="{% url 'note_list' %}?page=1">随笔</a></li>
+        <li {% if pageName == 'mood' %}class="active"{% endif %}><a href="{% url 'mood_index' %}">心情</a></li>
+        <li {% if pageName == 'msg_board' %}class="active"{% endif %}><a href="{% url 'msg_index' %}">留言板</a></li>
+        <li {% if pageName == 'resume' %}class="active"{% endif %}><a href="{% url 'resume_index' %}">我</a></li>
     </ul>
 </div>
 </header>

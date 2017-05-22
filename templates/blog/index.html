@@ -5,7 +5,7 @@
 
 {% block header %}
 <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-{% include 'public/nav.html' %}
+{% include 'public/nav.html' with pageName='blog_index' %}
 {% endblock %}
 
 {% block content %}

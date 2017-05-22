@@ -3,7 +3,7 @@
 
 {% block header %}
 <link rel="stylesheet" href="{% static 'css/board.css' %}">
-{% include 'public/nav.html' %}
+{% include 'public/nav.html' with pageName='msg_board' %}
 {% endblock %}
 
 {% block content %}
