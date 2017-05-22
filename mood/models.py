@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+
+class Mood(models.Model):
+    text = models.TextField()
+    picture = models.ImageField()
+    created = models.DateTimeField(auto_now_add=True)

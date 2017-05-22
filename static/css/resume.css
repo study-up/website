@@ -1,0 +1,23 @@
+.main {
+    width: 960px;
+    margin: auto;
+    background: #fff;
+    margin-top: 20px;
+}
+.personal {
+    padding: 60px 0 0 0;
+}
+.title {
+    border: 1px solid #9b9b9b;
+    text-align: center;
+    padding: 20px 0;
+    width: 342px;
+    margin: 0 auto;
+}
+
+.title span {
+    font-size: 36px;
+}
+.education, .skills {
+    background-color: #EEEEEE;
+}
