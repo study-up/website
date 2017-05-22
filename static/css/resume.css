@@ -10,14 +10,51 @@
 .title {
     border: 1px solid #9b9b9b;
     text-align: center;
-    padding: 20px 0;
-    width: 342px;
+    padding: 8px 0;
+    width: 372px;
     margin: 0 auto;
 }
 
 .title span {
-    font-size: 36px;
+    font-size: 32px;
 }
 .education, .skills {
     background-color: #EEEEEE;
+}
+.avatar{
+float:left;
+margin-left: 38px;
+
+}
+.avatar >img{
+width:300px;
+}
+.infos{
+float:left;
+line-height: 1.5em;
+    font-family: "微软雅黑", Helvetica, Arial, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+.infos>ul>li{
+border-bottom:1px solid #999;
+padding-bottom:8px;
+padding-top:20px;
+font-size:14px;
+    width: 200px;
+}
+.profile{
+float:left;
+font-size:14px;
+width: 294px;
+margin-left:40px;
+
+}
+.profile>p{
+word-wrap:break-word;
+ word-break:normal;
+}
+.box{
+    overflow: hidden;
+    margin-top:30px;
 }
