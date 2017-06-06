@@ -3,6 +3,7 @@
     margin: auto;
     background: #fff;
     margin-top: 20px;
+        position: relative;
 }
 .personal {
     padding: 60px 0 0 0;
@@ -20,7 +21,7 @@
 }
 .education, .skills {
     background-color: #EEEEEE;
-    padding: 60px 0 0 0;
+    padding: 30px 0px 30px 0px;
 
 }
 .avatar{
@@ -59,4 +60,95 @@ word-wrap:break-word;
 .box{
     overflow: hidden;
     margin-top:30px;
+}
+.edu_box{
+overflow:hidden;
+margin-top:20px;
+}
+.edu_left{
+width:150px;
+float:left;
+text-align:right;
+border-right:1px solid #ccc;
+padding:20px 20px 20px 20px;
+margin-left:50px;
+    height: 140px;
+}
+.edu_left>p{
+margin:0;
+}
+.edu_left_line{
+height:0;
+border-bottom:4px solid red;
+width:50px;
+text-align:right;
+display: inline-block;
+}
+
+.edu_right{
+float:left;
+padding-left:20px;
+width: 614px;
+}
+
+
+.work{
+padding-top:30px;
+padding-bottom:30px;
+
+}
+
+.contact{padding:30px 0 30px 0}
+.tel_img{
+width:100px;}
+.contact_content{
+margin:auto;
+text-align:center;
+margin-top:20px;}
+
+.top{
+display:inline-block;
+padding:5px;
+background:red;
+position: fixed;
+bottom:30px;
+right:20px;
+}
+
+
+.canvas-skills{
+position: relative;
+}
+.canvas-skills span {
+position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+div canvas{
+    -webkit-transform: rotateZ(-270deg);
+    transform:rotateZ(-270deg);
+    -webkit-animation:ani01 1s ease 0s both;
+    animation:ani01 1s ease 0s both;
+}
+
+@-webkit-keyframes ani01 {
+    0%{
+        -webkit-transform:scale(.5,.5) rotateZ(-270deg);
+        transform:scale(.5,.5) rotateZ(-270deg);
+    }
+    100%{
+        -webkit-transform:scale(1,1) rotateZ(-90deg);
+        transform:scale(1,1) rotateZ(-90deg);
+    }
+}
+@keyframes ani01 {
+    0%{
+        -webkit-transform:scale(.5,.5) rotateZ(-270deg);
+        transform:scale(.5,.5) rotateZ(-270deg);
+    }
+    100%{
+        -webkit-transform:scale(1,1) rotateZ(-90deg);
+        transform:scale(1,1) rotateZ(-90deg);
+    }
 }
