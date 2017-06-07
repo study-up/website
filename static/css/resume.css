@@ -3,7 +3,8 @@
     margin: auto;
     background: #fff;
     margin-top: 20px;
-        position: relative;
+    position: relative;
+    font-size: 14px;
 }
 .personal {
     padding: 60px 0 0 0;
@@ -24,112 +25,134 @@
     padding: 30px 0px 30px 0px;
 
 }
-.avatar{
-float:left;
-margin-left: 38px;
+.avatar {
+    float: left;
+    margin: 0 0 20px 38px;
+}
+.avatar >img {
+    width: 300px;
+}
 
-}
-.avatar >img{
-width:300px;
-}
-.infos{
-float:left;
-line-height: 1.5em;
+.infos {
+    float: left;
+    line-height: 1.5em;
     font-family: "微软雅黑", Helvetica, Arial, Verdana, sans-serif;
     font-style: normal;
     font-weight: normal;
 }
-.infos>ul>li{
-border-bottom:1px solid #999;
-padding-bottom:8px;
-padding-top:20px;
-font-size:14px;
+.infos ul {
+    margin-top: 0;
+}
+.infos ul li:first-child {
+    padding-top: 0;
+}
+.infos>ul>li {
+    border-bottom: 1px solid #999;
+    padding-bottom: 8px;
+    padding-top: 20px;
+    font-size: 14px;
     width: 200px;
 }
-.profile{
-float:left;
-font-size:14px;
-width: 294px;
-margin-left:40px;
-
+.profile {
+    float: left;
+    font-size: 14px;
+    width: 294px;
+    margin-left: 40px;
 }
-.profile>p{
-word-wrap:break-word;
- word-break:normal;
+.profile >h3 {
+    margin-top: 0;
 }
-.box{
+.profile >p {
+    word-wrap: break-word;
+    word-break: normal;
+}
+.box {
     overflow: hidden;
-    margin-top:30px;
+    margin-top: 30px;
 }
-.edu_box{
-overflow:hidden;
-margin-top:20px;
+.edu_box {
+    overflow: hidden;
+    margin-top: 20px;
 }
-.edu_left{
-width:150px;
-float:left;
-text-align:right;
-border-right:1px solid #ccc;
-padding:20px 20px 20px 20px;
-margin-left:50px;
-    height: 140px;
+.edu_left {
+    width: 192px;
+    float: left;
+    text-align: right;
+    border-right: 1px solid #ccc;
+    padding: 20px 20px 20px 20px;
+    margin-left: 30px;
 }
-.edu_left>p{
-margin:0;
-}
-.edu_left_line{
-height:0;
-border-bottom:4px solid red;
-width:50px;
-text-align:right;
-display: inline-block;
+.edu_left>p {
+    margin: 0;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: inherit;
 }
 
-.edu_right{
-float:left;
-padding-left:20px;
-width: 614px;
+.edu_left>p:last-child  {
+    padding-top: 8px;
+    font-weight: normal;
 }
 
-
-.work{
-padding-top:30px;
-padding-bottom:30px;
-
+.edu_left_line {
+    height: 0;
+    border-bottom: 4px solid red;
+    width: 68px;
+    text-align: right;
+    display: inline-block;
 }
 
-.contact{padding:30px 0 30px 0}
-.tel_img{
-width:100px;}
-.contact_content{
-margin:auto;
-text-align:center;
-margin-top:20px;}
-
-.top{
-display:inline-block;
-padding:5px;
-background:red;
-position: fixed;
-bottom:30px;
-right:20px;
+.edu_right {
+    float: left;
+    padding-left: 20px;
+    width: 614px;
 }
 
+.work {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 
-.canvas-skills{
-position: relative;
+.contact {
+    padding: 30px 0 30px 0
+}
+.tel_img {
+    width: 292px;
+}
+.contact_content {
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+}
+.contact_content >p{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 幼圆;
+}
+
+.top {
+    display: inline-block;
+    padding: 5px;
+    background: #EEEEEE;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+}
+.canvas-skills {
+    position: relative;
+    margin: 30px 8px 0 30px;
 }
 .canvas-skills span {
-position: absolute;
-    top: 20px;
-    left: 30px;
+    position: absolute;
+    top: 60px;
+    left: 38px;
 }
 
 div canvas{
     -webkit-transform: rotateZ(-270deg);
-    transform:rotateZ(-270deg);
-    -webkit-animation:ani01 1s ease 0s both;
-    animation:ani01 1s ease 0s both;
+    transform: rotateZ(-270deg);
+    -webkit-animation: ani01 1s ease 0s both;
+    animation: ani01 1s ease 0s both;
 }
 
 @-webkit-keyframes ani01 {
