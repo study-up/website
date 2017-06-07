@@ -141,6 +141,7 @@
 .canvas-skills {
     position: relative;
     margin: 30px 8px 0 30px;
+    float: left;
 }
 .canvas-skills span {
     position: absolute;
@@ -153,6 +154,9 @@ div canvas{
     transform: rotateZ(-270deg);
     -webkit-animation: ani01 1s ease 0s both;
     animation: ani01 1s ease 0s both;
+}
+.skill-contents {
+    overflow: hidden;
 }
 
 @-webkit-keyframes ani01 {
